@@ -1,0 +1,4 @@
+= Mandatory fields and status autochange
+
+= Author
+Turkin Ilya (iturkin@syntellect.ru). Based on work of Aaron Addleman © 2011 9thport. 9thport.net: Due date with offset for redmine
