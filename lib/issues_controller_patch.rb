@@ -51,7 +51,7 @@ module MandatoryFieldsAndStatusAutochange
                     return
                    end
                 when 12 #Выполнено
-                   if (params[:time_entry][:hours] == "")
+                   if (params.key?(:time_entry) && params[:time_entry][:hours] == "")
                     @issue.errors.add( :time_entries, :blank)
                    end
                    if @issue.errors.count != 0
