@@ -47,11 +47,12 @@
     <%= send_notification_option %>
     </div>
 
-    <%= f.hidden_field :lock_version %>
-    <%= submit_tag l(:button_submit) %>
+    
+  <%= f.hidden_field :lock_version %>
     <% if User.current.allowed_to?(:see_real_names, @project, :global => true) %>
-      <%= submit_tag l(:submit_button_ask_user) %>
+      <%= submit_tag l(:submit_button_ask_user), :style => "font: bold 14px Arial" %>
     <% end %>
+    <%= submit_tag l(:button_submit) %>
     <%= link_to_remote l(:label_preview),
                        { :url => preview_issue_path(:project_id => @project, :id => @issue),
                          :method => 'post',
